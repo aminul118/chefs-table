@@ -1,10 +1,10 @@
-import './Banner.css'
+import "./Banner.css";
 
 export default function Banner() {
   return (
     <div className="banner-container mt-4 mx-4">
       <div className="py-20 flex flex-col justify-center text-center text-white space-y-6">
-        <div className='w-8/12 mx-auto space-y-6'>
+        <div className="w-8/12 mx-auto space-y-6">
           <h1 className=" text-5xl font-bold">
             Discover an exceptional cooking class tailored for you!
           </h1>
