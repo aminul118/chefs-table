@@ -11,5 +11,5 @@ export default function App() {
       <Banner></Banner>
       {/* Recepies */}
     </div>
-  )
+  );
 }

@@ -1,0 +1,12 @@
+
+.banner-container{
+    background-image:url(../../assets/Image/chef-cooking.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-blend-mode: overlay;
+background-color: rgba(0, 0, 0, 0.61);
+backdrop-filter: blur(1px);
+border-radius: 20px;
+
+}
