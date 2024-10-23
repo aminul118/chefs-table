@@ -7,6 +7,8 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 
 export default function App() {
   const [recipeQueue, setRecipeQueue] = useState([]);
+  const [preparing, setPreparing] = useState([]);
+
   const handleCook = (cook) => {
     const ifExit = recipeQueue.find(
       (previousRecipe) => previousRecipe.recipe_id === cook.recipe_id
@@ -14,13 +16,25 @@ export default function App() {
     if (!ifExit) {
       setRecipeQueue([...recipeQueue, cook]);
     } else {
-      alert('Recipe already Exits');
+      alert("Recipe already Exits");
     }
   };
-  console.log(recipeQueue)
+
+  const handlePrepare = (item) => {
+    console.log(item)
+    // Fine which item remove
+    const deleteItem = recipeQueue.find((recipe) => recipe.recipe_id === item);
+    //
+    const updateItems = recipeQueue.filter(
+      (recipe) => recipe.recipe_id !== item
+    );
+    setRecipeQueue(updateItems);
+
+    setPreparing([...preparing, deleteItem])
+  };
 
   return (
-    <div className="container mx-auto">
+    <div className=" mx-auto container">
       {/* Header */}
       <Header></Header>
       {/* Banner */}
@@ -28,12 +42,16 @@ export default function App() {
       {/* Recepies */}
       <OurRecipes></OurRecipes>
       {/* Recipe card section */}
-      <section className="flex justify-between mx-6 mt-16">
+      <section className="flex justify-between mx-3 mt-16">
         {/* Card Section */}
         <Recipes handleCook={handleCook}></Recipes>
 
         {/* Sidebar section */}
-        <Sidebar recipeQueue={recipeQueue}></Sidebar>
+        <Sidebar
+          handlePrepare={handlePrepare}
+          preparing={preparing}
+          recipeQueue={recipeQueue}
+        ></Sidebar>
       </section>
     </div>
   );

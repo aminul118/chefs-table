@@ -51,7 +51,7 @@
         "recipe_image": "https://i.ibb.co.com/pjNPSWG/nick-bratanek-RBwli5-Vz-JXo-unsplash.jpg",
         "recipe_id": "4",
         "recipe_name": "Tacos",
-        "short_description": "Crunchy tacos filled with seasoned meat and fresh toppings.",
+        "short_description": "Crunchy tacos filled with seasoned meat",
         "ingredients": [
             "400 g ground beef",
             "8 taco shells",
@@ -89,7 +89,8 @@
             "50 g parmesan cheese",
             "100 g croutons",
             "50 ml Caesar dressing",
-            "1 tsp black pepper"
+            "1 tsp black pepper",
+            "2 Egg"
         ],
         "preparing_time": "15 min",
         "calories": "200 calories"

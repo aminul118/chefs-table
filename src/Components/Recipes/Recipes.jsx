@@ -13,7 +13,7 @@ export default function Recipes({ handleCook }) {
   return (
     <div className="w-2/3">
       <h1>Recipes {recipes.length}</h1>
-      <div className="grid grid-cols-2 gap-6 mt-4">
+      <div className="grid grid-cols-2 xl:grid-cols-3 gap-6 mt-4">
         {recipes.map((recipe, idx) => (
           <Recipe handleCook={handleCook} recipe={recipe} key={idx}></Recipe>
         ))}
